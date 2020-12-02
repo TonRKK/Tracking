@@ -15,9 +15,8 @@
         android:theme="@style/Theme.Tracking"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
-        <activity
-            android:name=".screens.MainActivity"
+        <activity android:name=".screens.MainActivity"></activity>
+        <activity android:name=".screens.menu">
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

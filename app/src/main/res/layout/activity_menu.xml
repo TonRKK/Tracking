@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none">
+    tools:context=".screens.menu">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAppTitle"
@@ -22,43 +22,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/searchPacking"
+        android:id="@+id/btShippingCost"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="265dp"
-        android:layout_height="190dp"
+        android:layout_width="263dp"
+        android:layout_height="199dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
         android:fontFamily="@font/montserrat_bold"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Search\nPacking"
-        android:textSize="30sp"
-        app:backgroundTint="#E40707"
-        app:layout_constraintBottom_toTopOf="@+id/calPrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAppTitle" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/calPrice"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="265dp"
-        android:layout_height="190dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="116dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="Calculate\nShipping Cost"
+        android:text="Calculate Shipping Cost"
         android:textSize="25sp"
-        app:backgroundTint="#127BAA"
+        app:backgroundTint="#CF0D4F"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchPacking"
+        app:layout_constraintTop_toBottomOf="@+id/layTrackingStatus" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btPacking"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="263dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Search Packing"
+        android:textSize="25sp"
+        app:backgroundTint="#3F1787"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btShippingCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppTitle"
         app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

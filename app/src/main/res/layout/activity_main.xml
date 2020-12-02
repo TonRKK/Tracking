@@ -97,7 +97,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-                android:id="@+id/btTrackNow"
+                android:id="@+id/btPacking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -113,6 +113,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layTrackingStatus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btBack"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="84dp"
+                android:layout_height="59dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Back"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.067" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

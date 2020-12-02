@@ -2,11 +2,13 @@ package com.chornerman.whereismystuff.screens
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AlertDialog
@@ -43,6 +45,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val button = findViewById<Button>(R.id.btBack)
+        button.setOnClickListener {
+            val intent = Intent(this@MainActivity, menu::class.java)
+            startActivity(intent)
+        }
         tilCouriersSelector.editText?.setText(couriers[currentCourierPos].second)
         bindViewEvents()
     }
@@ -55,8 +62,8 @@ class MainActivity : AppCompatActivity() {
             ).show()
         }
 
-        btTrackNow.setOnClickListener {
-            with(btTrackNow.text) {
+        btPacking.setOnClickListener {
+            with(btPacking.text) {
                 if (this == TRACK_NOW_BUTTON_TRACK_NOW) {
                     tilTrackingNumber.editText?.text.toString()
                         .takeUnless { it.isEmpty() }?.let {
@@ -159,7 +166,7 @@ class MainActivity : AppCompatActivity() {
             tvTrackingStatusSummary.takeUnless { summary.isNullOrEmpty() }?.text =
                 summary.toString()
             enableInputs(false)
-            btTrackNow.text = TRACK_NOW_BUTTON_TRACK_MORE
+            btPacking.text = TRACK_NOW_BUTTON_TRACK_MORE
         }
     }
 
@@ -173,7 +180,7 @@ class MainActivity : AppCompatActivity() {
         tvTrackingStatus.text = ""
         tilTrackingNumber.editText?.setText("")
         enableInputs(true)
-        btTrackNow.text = TRACK_NOW_BUTTON_TRACK_NOW
+        btPacking.text = TRACK_NOW_BUTTON_TRACK_NOW
     }
 
     private fun toastError(errMessage: String = "Unable to retrieve tracking information") {
